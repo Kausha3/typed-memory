@@ -1,0 +1,51 @@
+{
+  "name": "typed-memory",
+  "version": "0.1.0",
+  "description": "A tiny temporal, typed-constraint memory: facts retract instead of overwriting, so 'what's true now' stays correct over time. Zero dependencies.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "node --import tsx --test src/memory.test.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "keywords": [
+    "memory",
+    "agent",
+    "llm",
+    "ai",
+    "typed-constraint",
+    "retraction",
+    "temporal",
+    "knowledge-graph",
+    "facts"
+  ],
+  "author": "Kausha Trivedi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kausha3/typed-memory.git"
+  },
+  "homepage": "https://github.com/Kausha3/typed-memory#readme",
+  "bugs": "https://github.com/Kausha3/typed-memory/issues",
+  "devDependencies": {
+    "@types/node": "^22.20.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
