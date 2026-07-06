@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/Kausha3/typed-memory/actions/workflows/ci.yml/badge.svg)](https://github.com/Kausha3/typed-memory/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/typed-memory.svg)](https://www.npmjs.com/package/typed-memory)
+[![npm downloads](https://img.shields.io/npm/dm/typed-memory.svg)](https://www.npmjs.com/package/typed-memory)
+[![license](https://img.shields.io/npm/l/typed-memory.svg)](https://github.com/Kausha3/typed-memory/blob/main/LICENSE)
 
 **A tiny temporal, typed-constraint memory.** Facts are stored with a validity window, so
 when one changes it gets **retracted** instead of overwritten — *what's true now* stays
